@@ -1,15 +1,9 @@
-import innovation.Card;
-import innovation.Deck;
-import innovation.card.one.TheWheel;
+import innovation.*;
 
 public class Main {
     public static void main(String[] args) {
-        Deck deck = new Deck();
-        System.out.println(deck.getDeck().get(0));
-        /*
-        TheWheel wheel = new TheWheel();
+        Game game = new Game(2);
 
-        System.out.println(wheel);
-         */
+        System.out.println(game.getDeck().getOnes().get("The Wheel"));
     }
 }

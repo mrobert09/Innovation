@@ -1,15 +1,18 @@
 package innovation;
 
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
 import innovation.card.one.*;
 
 public class Deck {
-    private ArrayList<Card> onesDeck = new ArrayList<Card>();
+//    private ArrayList<Card> onesDeck = new ArrayList<Card>();
+    private Map<String, Card> onesDeck = new HashMap<>();
     public Deck() {
         fillDeck();
     }
 
-    public ArrayList<Card> getDeck() {
+    public Map<String, Card> getOnes() {
         return onesDeck;
     }
 
@@ -18,7 +21,7 @@ public class Deck {
     }
 
     private void fillOnes() {
-        onesDeck.add(new TheWheel());
-        onesDeck.add(new Writing());
+        onesDeck.put("The Wheel", new TheWheel());
+        onesDeck.put("Writing", new Writing());
     }
 }
