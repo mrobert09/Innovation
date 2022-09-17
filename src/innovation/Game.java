@@ -1,7 +1,7 @@
 package innovation;
 
 public class Game {
-    private int playerCount;
+    private final int playerCount;
     Deck deck = new Deck();
 
     public Game(int players) {
@@ -14,5 +14,5 @@ public class Game {
 
     public Deck getDeck() {
         return deck;
-    }
+        }
 }

@@ -5,6 +5,7 @@ import innovation.Card;
 public class Writing extends Card {
 
     public Writing() {
+        cardName = "Writing";
         topLeftIcon = null;
         bottomLeftIcon = "Lightbulb";
         bottomMiddleIcon = "Lightbulb";
@@ -18,7 +19,7 @@ public class Writing extends Card {
     public String toString() {
         String returnString =
                         "+----------------------------------------------+" + "\n" +
-                        "| +---+              Writing (CSL)             |" + "\n" +
+                        "| +---+              Writing (LTB)             |" + "\n" +
                         "| |NUL|  +-----------------------------------+ |" + "\n" +
                         "| +---+  | Draw [2]                          | |" + "\n" +
                         "|        +-----------------------------------+ |" + "\n" +

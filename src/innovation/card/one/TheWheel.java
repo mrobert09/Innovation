@@ -5,6 +5,7 @@ import innovation.Card;
 public class TheWheel extends Card {
 
     public TheWheel() {
+        cardName = "The Wheel";
         topLeftIcon = null;
         bottomLeftIcon = "Castle";
         bottomMiddleIcon = "Castle";
