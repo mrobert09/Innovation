@@ -17,26 +17,4 @@ public class Clothing extends Card {
         actions.add("Draw and score a [1] for each color present on your board not present on any opponent's board.");
         imgPath = "./src/imgs/one/Clothing.jpg";
     }
-
-//    public String toString() {
-//        String returnString =
-//                """
-//
-//                        +-----------------------------------------------+
-//                        | +---+             The Wheel (CSL)             |
-//                        | |NUL| +-------------------------------------+ |
-//                        | +---+ | Draw two [1].                       | |
-//                        |       +-------------------------------------+ |
-//                        |                                               |
-//                        |                                               |
-//                        |                                               |
-//                        |                                               |
-//                        | +---+               +---+               +---+ |
-//                        | |CSL|               |CSL|               |CSL| |
-//                        | +---+               +---+               +---+ |
-//                        +-----------------------------------------------+
-//                        """;
-//
-//        return returnString;
-//    }
 }

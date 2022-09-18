@@ -16,26 +16,4 @@ public class TheWheel extends Card {
         actions.add("Draw two [1].");
         imgPath = "./src/imgs/one/TheWheel.jpg";
     }
-
-//    public String toString() {
-//        String returnString =
-//                """
-//
-//                        +-----------------------------------------------+
-//                        | +---+             The Wheel (CSL)             |
-//                        | |NUL| +-------------------------------------+ |
-//                        | +---+ | Draw two [1].                       | |
-//                        |       +-------------------------------------+ |
-//                        |                                               |
-//                        |                                               |
-//                        |                                               |
-//                        |                                               |
-//                        | +---+               +---+               +---+ |
-//                        | |CSL|               |CSL|               |CSL| |
-//                        | +---+               +---+               +---+ |
-//                        +-----------------------------------------------+
-//                        """;
-//
-//        return returnString;
-//    }
 }

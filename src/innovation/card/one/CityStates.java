@@ -17,26 +17,4 @@ public class CityStates extends Card {
                 "four Castle on your board! If you do, draw a [1]!");
         imgPath = "./src/imgs/one/CityStates.jpg";
     }
-
-//    public String toString() {
-//        String returnString =
-//                """
-//
-//                        +-----------------------------------------------+
-//                        | +---+            City States (CRN)            |
-//                        | |NUL| +-------------------------------------+ |
-//                        | +---+ | I DEMAND you transfer a top card    | |
-//                        |       | with a CSL from your board to my    | |
-//                        |       | board if you have at least four CSL | |
-//                        |       | on your board! If you do, draw a    | |
-//                        |       | [1]!                                | |
-//                        |       +-------------------------------------+ |
-//                        | +---+               +---+               +---+ |
-//                        | |CRN|               |CRN|               |CSL| |
-//                        | +---+               +---+               +---+ |
-//                        +-----------------------------------------------+
-//                        """;
-//
-//        return returnString;
-//    }
 }

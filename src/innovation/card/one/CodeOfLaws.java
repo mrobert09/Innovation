@@ -17,26 +17,4 @@ public class CodeOfLaws extends Card {
                 "If you do, you may splay that color of your cards left.");
         imgPath = "./src/imgs/one/CodeOfLaws.jpg";
     }
-
-//    public String toString() {
-//        String returnString =
-//                """
-//
-//                        +-----------------------------------------------+
-//                        | +---+           Code of Laws (LTB)            |
-//                        | |NUL| +-------------------------------------+ |
-//                        | +---+ | You may tuck a card from your hand  | |
-//                        |       | of the same color as any card on    | |
-//                        |       | your board. If you do, you may      | |
-//                        |       | splay that color of your cards left.| |
-//                        |       +-------------------------------------+ |
-//                        |                                               |
-//                        | +---+               +---+               +---+ |
-//                        | |CRN|               |CRN|               |LEF| |
-//                        | +---+               +---+               +---+ |
-//                        +-----------------------------------------------+
-//                        """;
-//
-//        return returnString;
-//    }
 }
