@@ -3,7 +3,6 @@ package innovation;
 import java.util.ArrayList;
 
 public class Card {
-    public static String iconTypes[] = {"Castle", "Factory", "Clock", "Lightbulb", "Crown", "Leaf"};
     protected String cardName;
     protected String topLeftIcon;
     protected String bottomLeftIcon;

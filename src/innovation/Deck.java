@@ -1,6 +1,7 @@
 package innovation;
 
 import innovation.card.one.*;
+import innovation.card.two.*;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -36,59 +37,109 @@ public class Deck {
         fillAchieves();
     }
 
+    /**
+     * Populates the ones deck with card objects.
+     */
     private void fillOnes() {
-        onesDeck.add(new TheWheel());
-        onesDeck.add(new Writing());
+        onesDeck.add(new Agriculture());
         onesDeck.add(new Archery());
-        onesDeck.add(new CodeOfLaws());
         onesDeck.add(new CityStates());
         onesDeck.add(new Clothing());
-        onesDeck.add(new Tools());
+        onesDeck.add(new CodeOfLaws());
         onesDeck.add(new Domestication());
+        onesDeck.add(new Masonry());
+        onesDeck.add(new Metalworking());
+        onesDeck.add(new Mysticism());
         onesDeck.add(new Oars());
-
+        onesDeck.add(new Pottery());
+        onesDeck.add(new Sailing());
+        onesDeck.add(new TheWheel());
+        onesDeck.add(new Tools());
+        onesDeck.add(new Writing());
 
         decks.add(onesDeck);
     }
 
+    /**
+     * Populates the twos deck with card objects.
+     */
     private void fillTwos() {
+        twosDeck.add(new Calendar());
+        twosDeck.add(new CanalBuilding());
+        twosDeck.add(new Construction());
+        twosDeck.add(new Currency());
+        twosDeck.add(new Fermenting());
+        twosDeck.add(new Mapmaking());
+        twosDeck.add(new Mathematics());
+        twosDeck.add(new Monotheism());
+        twosDeck.add(new Philosophy());
+        twosDeck.add(new RoadBuilding());
+
         decks.add(twosDeck);
     }
 
+    /**
+     * Populates the threes deck with card objects.
+     */
     private void fillThrees() {
         decks.add(threesDeck);
     }
 
+    /**
+     * Populates the fours deck with card objects.
+     */
     private void fillFours() {
         decks.add(foursDeck);
     }
 
+    /**
+     * Populates the fives deck with card objects.
+     */
     private void fillFives() {
         decks.add(fivesDeck);
     }
 
+    /**
+     * Populates the sixes deck with card objects.
+     */
     private void fillSixes() {
         decks.add(sixesDeck);
     }
 
+    /**
+     * Populates the sevens deck with card objects.
+     */
     private void fillSevens() {
         decks.add(sevensDeck);
     }
 
+    /**
+     * Populates the eights deck with card objects.
+     */
     private void fillEights() {
         decks.add(eightsDeck);
     }
 
+    /**
+     * Populates the nines deck with card objects.
+     */
     private void fillNines() {
         decks.add(ninesDeck);
     }
 
+    /**
+     * Populates the tens deck with card objects.
+     */
     private void fillTens() {
         decks.add(tensDeck);
     }
 
+    /**
+     * Populates the achievements deck with card objects.
+     */
     private void fillAchieves() {
         achieveDeck.add(draw(1));
+        achieveDeck.add(draw(2));
     }
 
     public Card draw(int age) {
