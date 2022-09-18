@@ -2,19 +2,19 @@ package innovation.card.one;
 
 import innovation.Card;
 
-public class TheWheel extends Card {
+public class Domestication extends Card {
 
-    public TheWheel() {
-        cardName = "The Wheel";
-        topLeftIcon = null;
-        bottomLeftIcon = "Castle";
-        bottomMiddleIcon = "Castle";
+    public Domestication() {
+        cardName = "Domestication";
+        topLeftIcon = "Castle";
+        bottomLeftIcon = "Crown";
+        bottomMiddleIcon = null;
         bottomRightIcon = "Castle";
         dogmaIcon = "Castle";
-        color = "Green";
+        color = "Yellow";
         age = 1;
-        actions.add("Draw two [1].");
-        imgPath = "./src/imgs/one/TheWheel.jpg";
+        actions.add("Meld the lowest card in your hand. Draw a [1].");
+        imgPath = "./src/imgs/one/Domestication.jpg";
     }
 
 //    public String toString() {
@@ -22,16 +22,16 @@ public class TheWheel extends Card {
 //                """
 //
 //                        +-----------------------------------------------+
-//                        | +---+             The Wheel (CSL)             |
-//                        | |NUL| +-------------------------------------+ |
-//                        | +---+ | Draw two [1].                       | |
+//                        | +---+           Domestication (CSL)           |
+//                        | |CSL| +-------------------------------------+ |
+//                        | +---+ | Meld the lowest card in your hand.  | |
+//                        |       | Draw a [1].                         | |
+//                        |       |                                     | |
 //                        |       +-------------------------------------+ |
 //                        |                                               |
 //                        |                                               |
-//                        |                                               |
-//                        |                                               |
 //                        | +---+               +---+               +---+ |
-//                        | |CSL|               |CSL|               |CSL| |
+//                        | |CRN|               |NUL|               |CSL| |
 //                        | +---+               +---+               +---+ |
 //                        +-----------------------------------------------+
 //                        """;

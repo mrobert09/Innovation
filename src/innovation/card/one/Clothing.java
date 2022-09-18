@@ -2,10 +2,10 @@ package innovation.card.one;
 
 import innovation.Card;
 
-public class TheWheel extends Card {
+public class Clothing extends Card {
 
-    public TheWheel() {
-        cardName = "The Wheel";
+    public Clothing() {
+        cardName = "Clothing";
         topLeftIcon = null;
         bottomLeftIcon = "Castle";
         bottomMiddleIcon = "Castle";
@@ -13,8 +13,9 @@ public class TheWheel extends Card {
         dogmaIcon = "Castle";
         color = "Green";
         age = 1;
-        actions.add("Draw two [1].");
-        imgPath = "./src/imgs/one/TheWheel.jpg";
+        actions.add("Meld a card from your hand of a different color from any card on your board.");
+        actions.add("Draw and score a [1] for each color present on your board not present on any opponent's board.");
+        imgPath = "./src/imgs/one/Clothing.jpg";
     }
 
 //    public String toString() {

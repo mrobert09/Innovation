@@ -2,19 +2,20 @@ package innovation.card.one;
 
 import innovation.Card;
 
-public class Writing extends Card {
+public class Tools extends Card {
 
-    public Writing() {
-        cardName = "Writing";
+    public Tools() {
+        cardName = "Tools";
         topLeftIcon = null;
         bottomLeftIcon = "Lightbulb";
         bottomMiddleIcon = "Lightbulb";
-        bottomRightIcon = "Crown";
+        bottomRightIcon = "Castle";
         dogmaIcon = "Lightbulb";
         color = "Blue";
         age = 1;
-        actions.add("Draw a [2].");
-        imgPath = "./src/imgs/one/Writing.jpg";
+        actions.add("You may return three cards from your hand. If you do, draw and meld a [3].");
+        actions.add("You may return a [3] from your hand. If you do, draw three [1].");
+        imgPath = "./src/imgs/one/Tools.jpg";
     }
 
 //    public String toString() {
@@ -22,14 +23,14 @@ public class Writing extends Card {
 //                """
 //
 //                        +-----------------------------------------------+
-//                        | +---+              Writing (LTB)              |
+//                        | +---+              Tools (LTB)                |
 //                        | |NUL| +-------------------------------------+ |
-//                        | +---+ | Draw a [2].                         | |
+//                        | +---+ | You may return three cards from your| |
+//                        |       | hand. If you do, draw and meld a    | |
+//                        |       | [3].                                | |
 //                        |       +-------------------------------------+ |
-//                        |                                               |
-//                        |                                               |
-//                        |                                               |
-//                        |                                               |
+//                        |       | You may return a [3] from your hand.| |
+//                        |       | If you do, draw three [1].          | |
 //                        | +---+               +---+               +---+ |
 //                        | |LTB|               |LTB|               |LTB| |
 //                        | +---+               +---+               +---+ |

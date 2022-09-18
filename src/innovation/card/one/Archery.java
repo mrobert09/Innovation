@@ -13,23 +13,7 @@ public class Archery extends Card {
         dogmaIcon = "Castle";
         color = "Red";
         age = 1;
-        actions.add("I demand you draw a [1]! Then, transfer the highest card from your hand to my hand!");
-    }
-
-    public String toString() {
-        String returnString =
-                        "+----------------------------------------------+" + "\n" +
-                        "| +---+             Archery (CSL)              |" + "\n" +
-                        "| |CSL|  +-----------------------------------+ |" + "\n" +
-                        "| +---+  | I DEMAND you draw a [1]. Then     | |" + "\n" +
-                        "|        | transfer to my hand your highest  | |" + "\n" +
-                        "|        | card.                             | |" + "\n" +
-                        "|        +-----------------------------------+ |" + "\n" +
-                        "| +---+             +---+             +---+    |" + "\n" +
-                        "| |LTB|             |NUL|             |CSL|    |" + "\n" +
-                        "| +---+             +---+             +---+    |" + "\n" +
-                        "+----------------------------------------------+" + "\n";
-
-        return returnString;
+        actions.add("I DEMAND you draw a [1], then, transfer the highest card from your hand to my hand!");
+        imgPath = "./src/imgs/one/Archery.jpg";
     }
 }

@@ -14,23 +14,29 @@ public class CodeOfLaws extends Card {
         color = "Purple";
         age = 1;
         actions.add("You may tuck a card from your hand of the same color as any card on your board. " +
-                "If you do, you may splay that color left.");
+                "If you do, you may splay that color of your cards left.");
+        imgPath = "./src/imgs/one/CodeOfLaws.jpg";
     }
 
-    public String toString() {
-        String returnString =
-                        "+----------------------------------------------+" + "\n" +
-                        "| +---+           Code of Laws (LTB)           |" + "\n" +
-                        "| |NUL|  +-----------------------------------+ |" + "\n" +
-                        "| +---+  | You may tuck a card from your hand| |" + "\n" +
-                        "|        | of the same color as on board. If | |" + "\n" +
-                        "|        | so, you may splay that color left.| |" + "\n" +
-                        "|        +-----------------------------------+ |" + "\n" +
-                        "| +---+             +---+             +---+    |" + "\n" +
-                        "| |CRN|             |CRN|             |LEF|    |" + "\n" +
-                        "| +---+             +---+             +---+    |" + "\n" +
-                        "+----------------------------------------------+" + "\n";
-
-        return returnString;
-    }
+//    public String toString() {
+//        String returnString =
+//                """
+//
+//                        +-----------------------------------------------+
+//                        | +---+           Code of Laws (LTB)            |
+//                        | |NUL| +-------------------------------------+ |
+//                        | +---+ | You may tuck a card from your hand  | |
+//                        |       | of the same color as any card on    | |
+//                        |       | your board. If you do, you may      | |
+//                        |       | splay that color of your cards left.| |
+//                        |       +-------------------------------------+ |
+//                        |                                               |
+//                        | +---+               +---+               +---+ |
+//                        | |CRN|               |CRN|               |LEF| |
+//                        | +---+               +---+               +---+ |
+//                        +-----------------------------------------------+
+//                        """;
+//
+//        return returnString;
+//    }
 }

@@ -13,6 +13,7 @@ public class Card {
     protected String color;
     protected int age;
     protected ArrayList<String> actions = new ArrayList<String>();
+    protected String imgPath;
 
     public void displayText() {
         for (String action: actions) {
@@ -51,17 +52,21 @@ public class Card {
         return this.dogmaIcon;
     }
 
-    /*
-                        "+----------------------------------------------+" + "\n" +
-                        "| +---+                                        |" + "\n" +
-                        "| |   |                                        |" + "\n" +
-                        "| +---+                                        |" + "\n" +
-                        "|                                              |" + "\n" +
-                        "|                                              |" + "\n" +
-                        "|                                              |" + "\n" +
-                        "| +---+             +---+             +---+    |" + "\n" +
-                        "| |   |             |   |             |   |    |" + "\n" +
-                        "| +---+             +---+             +---+    |" + "\n" +
-                        "+----------------------------------------------+";
+    /**
+     * Calls the CardViewer to display card.
      */
+    public void displayCard() {
+        CardViewer window = new CardViewer(imgPath);
+    }
+
+    public String toString() {
+        StringBuilder dogmas = new StringBuilder();
+        for (String action : actions) {
+            dogmas.append("Dogma: ");
+            dogmas.append(action);
+            dogmas.append("\n");
+        }
+
+        return "\nName: " + cardName + "\nColor: " + color + "\nAge: " + age + "\n" + dogmas;
+    }
 }
