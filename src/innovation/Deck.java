@@ -1,6 +1,7 @@
 package innovation;
 
 import innovation.card.one.*;
+import innovation.card.three.*;
 import innovation.card.two.*;
 
 import java.util.ArrayList;
@@ -45,7 +46,7 @@ public class Deck {
         onesDeck.add(new Archery());
         onesDeck.add(new CityStates());
         onesDeck.add(new Clothing());
-        onesDeck.add(new CodeOfLaws());
+        onesDeck.add(new CodeofLaws());
         onesDeck.add(new Domestication());
         onesDeck.add(new Masonry());
         onesDeck.add(new Metalworking());
@@ -82,6 +83,17 @@ public class Deck {
      * Populates the threes deck with card objects.
      */
     private void fillThrees() {
+        threesDeck.add(new Alchemy());
+        threesDeck.add(new Compass());
+        threesDeck.add(new Education());
+        threesDeck.add(new Engineering());
+        threesDeck.add(new Feudalism());
+        threesDeck.add(new Machinery());
+        threesDeck.add(new Medicine());
+        threesDeck.add(new Optics());
+        threesDeck.add(new Paper());
+        threesDeck.add(new Translation());
+
         decks.add(threesDeck);
     }
 
@@ -154,5 +166,26 @@ public class Deck {
             deck.remove(drawnCard);
         }
         return drawnCard;
+    }
+
+    public ArrayList<Card> getDeck(String age) {
+        return switch (age) {
+            case "1" -> onesDeck;
+            case "2" -> twosDeck;
+            case "3" -> threesDeck;
+            case "4" -> foursDeck;
+            case "5" -> fivesDeck;
+            case "6" -> sixesDeck;
+            case "7" -> sevensDeck;
+            case "8" -> eightsDeck;
+            case "9" -> ninesDeck;
+            case "10" -> tensDeck;
+            case "standardAchieve" -> achieveDeck;
+            default -> null;
+        };
+    }
+
+    public int getRemaining(String age) {
+        return getDeck(age).size();
     }
 }

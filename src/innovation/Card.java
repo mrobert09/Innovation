@@ -51,6 +51,10 @@ public class Card {
         return this.dogmaIcon;
     }
 
+    public String getCardName() {
+        return this.cardName;
+    }
+
     /**
      * Calls the CardViewer to display card.
      */

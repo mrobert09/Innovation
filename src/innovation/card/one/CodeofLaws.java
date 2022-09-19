@@ -2,9 +2,9 @@ package innovation.card.one;
 
 import innovation.Card;
 
-public class CodeOfLaws extends Card {
+public class CodeofLaws extends Card {
 
-    public CodeOfLaws() {
+    public CodeofLaws() {
         cardName = "Code of Laws";
         topLeftIcon = null;
         bottomLeftIcon = "Crown";
@@ -15,6 +15,6 @@ public class CodeOfLaws extends Card {
         age = 1;
         actions.add("You may tuck a card from your hand of the same color as any card on your board. " +
                 "If you do, you may splay that color of your cards left.");
-        imgPath = "./src/imgs/one/CodeOfLaws.jpg";
+        imgPath = "./src/imgs/one/CodeofLaws.jpg";
     }
 }

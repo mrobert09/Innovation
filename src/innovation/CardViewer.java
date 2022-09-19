@@ -10,7 +10,7 @@ public class CardViewer {
     public CardViewer(String path) {
         JFrame frame = new JFrame();
         frame.setTitle("Card Viewer");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setResizable(false);
         frame.setVisible(true);
         frame.setSize(400, 400);
