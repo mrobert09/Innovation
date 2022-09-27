@@ -16,6 +16,6 @@ public class Enterprise extends Card {
         actions.add("I DEMAND you transfer a top non-purple card with a Crown from your board to my board! If you " +
                 "do, draw and meld a [4].");
         actions.add("You may splay your green cards right.");
-        imgPath = "./src/imgs/three/Enterprise.jpg";
+        imgPath = "./src/imgs/four/Enterprise.jpg";
     }
 }

@@ -16,6 +16,6 @@ public class PrintingPress extends Card {
         actions.add("You may return a card from your score pile. If you do, draw a card of value two higher than " +
                 "the top purple card on your board.");
         actions.add("You may splay your blue cards right.");
-        imgPath = "./src/imgs/three/PrintingPress.jpg";
+        imgPath = "./src/imgs/four/PrintingPress.jpg";
     }
 }

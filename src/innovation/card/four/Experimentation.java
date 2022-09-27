@@ -14,6 +14,6 @@ public class Experimentation extends Card {
         color = "Blue";
         age = 4;
         actions.add("Draw and meld a [5].");
-        imgPath = "./src/imgs/three/Experimentation.jpg";
+        imgPath = "./src/imgs/four/Experimentation.jpg";
     }
 }

@@ -1,5 +1,6 @@
 package innovation;
 
+import innovation.card.five.*;
 import innovation.card.four.*;
 import innovation.card.one.*;
 import innovation.card.three.*;
@@ -120,6 +121,17 @@ public class Deck {
      * Populates the fives deck with card objects.
      */
     private void fillFives() {
+        fivesDeck.add(new Astronomy());
+        fivesDeck.add(new Banking());
+        fivesDeck.add(new Chemistry());
+        fivesDeck.add(new Coal());
+        fivesDeck.add(new Measurement());
+        fivesDeck.add(new Physics());
+        fivesDeck.add(new Societies());
+        fivesDeck.add(new Statistics());
+        fivesDeck.add(new SteamEngine());
+        fivesDeck.add(new ThePirateCode());
+
         decks.add(fivesDeck);
     }
 

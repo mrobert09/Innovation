@@ -15,6 +15,6 @@ public class Perspective extends Card {
         age = 4;
         actions.add("You may return a card from your hand. If you do, score a card from your hand for every two " +
                 "Lightbulb on your board.");
-        imgPath = "./src/imgs/three/Perspective.jpg";
+        imgPath = "./src/imgs/four/Perspective.jpg";
     }
 }

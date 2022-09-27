@@ -14,6 +14,6 @@ public class Colonialism extends Card {
         color = "Red";
         age = 4;
         actions.add("Draw and tuck a [3]. If it has a Crown, repeat this dogma effect.");
-        imgPath = "./src/imgs/three/Colonialism.jpg";
+        imgPath = "./src/imgs/four/Colonialism.jpg";
     }
 }

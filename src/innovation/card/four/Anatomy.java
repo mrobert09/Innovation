@@ -15,6 +15,6 @@ public class Anatomy extends Card {
         age = 4;
         actions.add("I DEMAND you return a card from your score pile! If you do, return a top card of equal value " +
                 "from your board!");
-        imgPath = "./src/imgs/three/Anatomy.jpg";
+        imgPath = "./src/imgs/four/Anatomy.jpg";
     }
 }

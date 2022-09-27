@@ -16,6 +16,6 @@ public class Invention extends Card {
         actions.add("You may splay right any one color of your cards currently splayed left. If you do, draw and " +
                 "score a [4].");
         actions.add("If you have five colors splayed, each in any direction, claim the Wonder achievement.");
-        imgPath = "./src/imgs/three/Invention.jpg";
+        imgPath = "./src/imgs/four/Invention.jpg";
     }
 }

@@ -15,6 +15,6 @@ public class Reformation extends Card {
         age = 4;
         actions.add("You may tuck a card from your hand for every two Leaf on your board.");
         actions.add("You may splay your yellow or purple cards right.");
-        imgPath = "./src/imgs/three/Reformation.jpg";
+        imgPath = "./src/imgs/four/Reformation.jpg";
     }
 }

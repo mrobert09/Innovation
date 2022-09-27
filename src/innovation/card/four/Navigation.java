@@ -14,6 +14,6 @@ public class Navigation extends Card {
         color = "Green";
         age = 4;
         actions.add("I DEMAND you transfer a [2] or [3] from yoru score pile, if it has any, to my score pile!");
-        imgPath = "./src/imgs/three/Navigation.jpg";
+        imgPath = "./src/imgs/four/Navigation.jpg";
     }
 }
