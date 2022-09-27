@@ -1,5 +1,6 @@
 package innovation;
 
+import innovation.card.four.*;
 import innovation.card.one.*;
 import innovation.card.three.*;
 import innovation.card.two.*;
@@ -101,6 +102,17 @@ public class Deck {
      * Populates the fours deck with card objects.
      */
     private void fillFours() {
+        foursDeck.add(new Anatomy());
+        foursDeck.add(new Colonialism());
+        foursDeck.add(new Enterprise());
+        foursDeck.add(new Experimentation());
+        foursDeck.add(new Gunpowder());
+        foursDeck.add(new Invention());
+        foursDeck.add(new Navigation());
+        foursDeck.add(new Perspective());
+        foursDeck.add(new PrintingPress());
+        foursDeck.add(new Reformation());
+
         decks.add(foursDeck);
     }
 
