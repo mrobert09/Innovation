@@ -3,6 +3,7 @@ package innovation;
 import innovation.card.five.*;
 import innovation.card.four.*;
 import innovation.card.one.*;
+import innovation.card.six.*;
 import innovation.card.three.*;
 import innovation.card.two.*;
 
@@ -139,6 +140,17 @@ public class Deck {
      * Populates the sixes deck with card objects.
      */
     private void fillSixes() {
+        sixesDeck.add(new AtomicTheory());
+        sixesDeck.add(new Canning());
+        sixesDeck.add(new Classification());
+        sixesDeck.add(new Democracy());
+        sixesDeck.add(new Emancipation());
+        sixesDeck.add(new Encyclopedia());
+        sixesDeck.add(new Industrialization());
+        sixesDeck.add(new MachineTools());
+        sixesDeck.add(new MetricSystem());
+        sixesDeck.add(new Vaccination());
+
         decks.add(sixesDeck);
     }
 
@@ -176,6 +188,10 @@ public class Deck {
     private void fillAchieves() {
         achieveDeck.add(draw(1));
         achieveDeck.add(draw(2));
+        achieveDeck.add(draw(3));
+        achieveDeck.add(draw(4));
+        achieveDeck.add(draw(5));
+        achieveDeck.add(draw(6));
     }
 
     public Card draw(int age) {
