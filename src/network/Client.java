@@ -17,7 +17,9 @@ public class Client {
     private String command = "";
     private Scanner scanner = new Scanner(System.in);
     private Listener listener;
+    private Thread listenThread;
     private Writer writer;
+    private Thread writeThread;
 
     public Client(String ip, int port) {
         this.hostIP = ip;
@@ -30,7 +32,7 @@ public class Client {
             setupStreams();
             setupListener();
             setupWriter();
-            while(listener.getCommand() != "exit") {}
+            while(!listener.getCommand().equals("exit")) {}
         } catch(EOFException eof) {
             System.out.println("(Client) EOF exception.");
         } catch(IOException e) {
@@ -56,47 +58,26 @@ public class Client {
     }
 
     private void setupListener() throws IOException, InterruptedException {
-        listener = new Listener(input);
-        Thread listenThread = new Thread(listener);
+        listener = new Listener(input, 2);
+        listenThread = new Thread(listener);
         listenThread.start();
     }
 
     private void setupWriter() throws IOException, InterruptedException {
         writer = new Writer(output);
-        Thread writeThread = new Thread(writer);
+        writeThread = new Thread(writer);
         writeThread.start();
-    }
-
-    private void whileConnected() throws IOException {
-        do {
-            try {
-                // command = (String) input.readObject();
-                System.out.println("(Client) Message from server: " + command);
-                String commandToSend = scanner.nextLine();
-                sendCommand(commandToSend);
-                command = (String) input.readObject();
-            } catch(ClassNotFoundException cnf) {
-                System.out.println("(Client) Don't recognize object type.");
-            }
-        } while (!command.equals("exit"));
     }
 
     private void closeConnection() {
         System.out.println("(Client) Closing connection...");
         try {
+            writer.sendCommand("exit");
+            listenThread.interrupt();
+            writeThread.interrupt();
             output.close();
             input.close();
             connection.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    private void sendCommand(String command) {
-        try {
-            output.writeObject("Writing: " + command);
-            output.flush();
-            System.out.println("Sent: " + command);
         } catch (IOException e) {
             e.printStackTrace();
         }

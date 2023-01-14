@@ -26,7 +26,7 @@ public class Writer implements Runnable {
         return command;
     }
 
-    private void sendCommand(String command) {
+    public void sendCommand(String command) {
         try {
             output.writeObject(command);
             output.flush();

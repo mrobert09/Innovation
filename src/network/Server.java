@@ -15,7 +15,9 @@ public class Server {
     private Socket connection;
     private String command = "";
     private Listener listener;
+    private Thread listenThread;
     private Writer writer;
+    private Thread writeThread;
 
     public Server(int port) throws IOException {
         this.port = port;
@@ -30,8 +32,7 @@ public class Server {
                     setupStreams();
                     setupListener();
                     setupWriter();
-                    while(listener.getCommand() != "exit") {}
-                    //whileConnected();
+                    while(!writer.getCommand().equals("exit")) {}
                 } catch (EOFException | InterruptedException eof) {
                     System.out.println("Server closed.");
                 } finally {
@@ -57,32 +58,23 @@ public class Server {
     }
 
     private void setupListener() throws IOException, InterruptedException {
-        listener = new Listener(input);
-        Thread listenThread = new Thread(listener);
+        listener = new Listener(input, 1);
+        listenThread = new Thread(listener);
         listenThread.start();
     }
 
     private void setupWriter() throws IOException, InterruptedException {
         writer = new Writer(output);
-        Thread writeThread = new Thread(writer);
+        writeThread = new Thread(writer);
         writeThread.start();
-    }
-
-    private void whileConnected() throws IOException {
-        do {
-            try {
-                command = (String) input.readObject();
-                System.out.println("(Server) Received command: " + command);
-                // command = (String) input.readObject();
-            } catch(ClassNotFoundException cnf) {
-                System.out.println("(Server) Unknown command sent.");
-            }
-        } while(!command.equals("exit"));
     }
 
     private void closeConnection() {
         System.out.println("(Server) Closing connection...");
         try {
+            writer.sendCommand("exit");
+            listenThread.interrupt();
+            writeThread.interrupt();
             output.close();
             input.close();
             connection.close();

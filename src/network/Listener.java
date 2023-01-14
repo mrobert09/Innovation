@@ -7,9 +7,15 @@ public class Listener implements Runnable {
 
     private ObjectInputStream input;
     private String command = "";
+    private String name;
 
-    public Listener(ObjectInputStream input) {
+    public Listener(ObjectInputStream input, int entity) {
         this.input = input;
+        if (entity == 1) {
+            name = "(Client) ";
+        } else {
+            name = "(Server) ";
+        }
     }
 
     @Override
@@ -17,9 +23,10 @@ public class Listener implements Runnable {
         do {
             try {
                 command = (String) input.readObject();
-                System.out.println("(Server) Received command: " + command);
+                System.out.println(name + command);
             } catch(ClassNotFoundException | IOException cnf) {
-                System.out.println("(Server) Unknown command sent.");
+                System.out.println(name + "Unknown command sent.");
+                break;
             }
         } while(!command.equals("exit"));
     }
