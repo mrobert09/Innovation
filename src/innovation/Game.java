@@ -131,6 +131,48 @@ public class Game {
                     default -> {}
                 }
             }
+            case "help" -> {
+                if (words.length < 2) {
+                    displayCommands();
+                    System.out.println("\nUse 'help <command>' for information about that command.");
+                } else {
+                    switch (words[1]) {
+                        case "draw" -> {
+                            System.out.println("Draws a new card of the highest age on your board.");
+                        }
+                        case "meld" -> {
+                            System.out.printf("Syntax: 'meld <Card>'. Melds specified card to your board." );
+                        }
+                        case "view" -> {
+                            if (words.length < 3) {
+                                System.out.printf("Displays information about aspect of game.");
+                            } else {
+                                switch (words[2]) {
+                                    case "hand" -> {
+                                        System.out.println("Displays cards in hand.");
+                                    }
+                                    case "deck" -> {
+                                        System.out.println("Syntax: 'view deck <Age>'. Displays # of cards in age.");
+                                    }
+                                    case "achievements" -> {
+                                        System.out.printf("Displays # of achievements available.");
+                                    }
+                                    case "card" -> {
+                                        System.out.printf("Syntax: 'view card <Card>'. Displays card graphic.");
+                                    }
+                                    case "board" -> {
+                                        System.out.printf("Displays state of the board.");
+                                    }
+                                    case "player" -> {
+                                        System.out.printf("Synatx: 'view player <#>'. Displays player summary.");
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
         }
     }
 
@@ -156,6 +198,9 @@ public class Game {
      */
     private void playerDisplay(String[] words) {
         Player player;
+        if (words.length < 3) {
+            return;
+        }
         if (words[2].equals("1")) {
             player = playerList.get(0);
             System.out.println("Player 1 Summary: ");
@@ -198,10 +243,17 @@ public class Game {
         }
     }
 
-    private void printStackCards (ArrayList<Card> stack) {
+    private void printStackCards(ArrayList<Card> stack) {
         for (int i = stack.size() - 1; i >= 0; i--) {
             System.out.print(stack.get(i).getCardName() + " ");
         }
         System.out.println();
+    }
+
+    private void displayCommands(){
+        System.out.println("Commands");
+        System.out.println("draw");
+        System.out.println("meld");
+        System.out.println("view <hand|deck|achievements|card|board|player>");
     }
 }
