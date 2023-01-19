@@ -19,7 +19,7 @@ public class Server {
     private Writer writer;
     private Thread writeThread;
 
-    public Server(int port) throws IOException {
+    public Server(int port) {
         this.port = port;
     }
 
