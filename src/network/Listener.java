@@ -5,33 +5,23 @@ import java.io.ObjectInputStream;
 
 public class Listener implements Runnable {
 
-    private ObjectInputStream input;
-    private String command = "";
-    private String name;
+    private final ObjectInputStream input;
 
-    public Listener(ObjectInputStream input, int entity) {
+    public Listener(ObjectInputStream input) {
         this.input = input;
-        if (entity == 1) {
-            name = "(Client) ";
-        } else {
-            name = "(Server) ";
-        }
     }
 
     @Override
     public void run() {
+        String command;
         do {
             try {
                 command = (String) input.readObject();
-                System.out.println(name + command);
+                System.out.println(command);
             } catch(ClassNotFoundException | IOException cnf) {
-                System.out.println(name + "Unknown command sent.");
+                System.out.println("Unknown command sent.");
                 break;
             }
         } while(!command.equals("exit"));
-    }
-
-    public String getCommand() {
-        return command;
     }
 }

@@ -16,10 +16,7 @@ public class Client {
     private final int port;
     private String command = "";
     private Scanner scanner = new Scanner(System.in);
-    private Listener listener;
-    private Thread listenThread;
-    private Writer writer;
-    private Thread writeThread;
+
 
     public Client(String ip, int port) {
         this.hostIP = ip;
@@ -30,17 +27,11 @@ public class Client {
         try {
             connectToServer();
             setupStreams();
-            setupListener();
-            setupWriter();
-            while(!listener.getCommand().equals("exit")) {}
+            setupThreads();
         } catch(EOFException eof) {
             System.out.println("(Client) EOF exception.");
         } catch(IOException e) {
             e.printStackTrace();
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        } finally {
-            closeConnection();
         }
     }
 
@@ -57,29 +48,13 @@ public class Client {
         System.out.println("(Client) Streams connected.");
     }
 
-    private void setupListener() throws IOException, InterruptedException {
-        listener = new Listener(input, 2);
-        listenThread = new Thread(listener);
+    private void setupThreads() {
+        Listener listener = new Listener(input);
+        Thread listenThread = new Thread(listener);
         listenThread.start();
-    }
 
-    private void setupWriter() throws IOException, InterruptedException {
-        writer = new Writer(output);
-        writeThread = new Thread(writer);
+        Writer writer = new Writer(output);
+        Thread writeThread = new Thread(writer);
         writeThread.start();
-    }
-
-    private void closeConnection() {
-        System.out.println("(Client) Closing connection...");
-        try {
-            writer.sendCommand("exit");
-            listenThread.interrupt();
-            writeThread.interrupt();
-            output.close();
-            input.close();
-            connection.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 }

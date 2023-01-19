@@ -6,9 +6,8 @@ import java.util.Scanner;
 
 public class Writer implements Runnable {
 
-    private ObjectOutputStream output;
-    private String command = "";
-    private Scanner scanner = new Scanner(System.in);
+    private final ObjectOutputStream output;
+    private final Scanner scanner = new Scanner(System.in);
 
     public Writer (ObjectOutputStream output) {
         this.output = output;
@@ -16,14 +15,11 @@ public class Writer implements Runnable {
 
     @Override
     public void run() {
+        String command;
         do {
-            String commandToSend = scanner.nextLine();
-            sendCommand(commandToSend);
+            command = scanner.nextLine();
+            sendCommand(command);
         } while (!command.equals("exit"));
-    }
-
-    public String getCommand() {
-        return command;
     }
 
     public void sendCommand(String command) {
